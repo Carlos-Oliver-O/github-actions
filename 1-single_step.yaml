@@ -1,0 +1,19 @@
+name: First action - Single
+on:
+  workflow_dispatch:
+
+job:
+  runs-on: ubuntu-latest
+  steps:
+    - name: Hello Action
+      run: |
+        echo "Hello, how can I help you?"
+      shell: bash
+      env:
+        GREETING: "Hello, how can I help you?"
+      with:
+        greeting: ${{ env.GREETING }}
+description: |
+  This is a simple action that will be triggered when the user says "hello".
+  It will respond with "Hello, how can I help you?".
+  This is a single step action, meaning it will not wait for any user input. 
