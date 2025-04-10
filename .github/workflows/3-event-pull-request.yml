@@ -17,4 +17,4 @@ jobs:
         run: |
           echo "Pull Request triggered"
           echo "PR Title: ${{ github.event.pull_request.title }}"
-          echo "PR Branch: ${{ github.head_ref }}"
+          echo "PR Branch: ${{ github.head_ref }}" 
