@@ -2,10 +2,18 @@
 name: Hello World Workflow
 
 on:
-  push:
-    branches:
-      - main  # o master, según tu rama principal
-
+  workflow_dispatch:
+    inputs:
+      debug_mode:
+        type: boolean
+        description: Debug
+        default: false
+        required: false
+      sample_value:
+        type: string
+        description: Cualquier valor
+        default: ""
+        required: false   
 jobs:
   hello_world:
     runs-on: ubuntu-latest
