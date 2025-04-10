@@ -1,0 +1,18 @@
+# .github/workflows/on-label.yml
+name: On PR Label
+
+on:
+  pull_request:
+    types: [labeled]
+
+jobs:
+  react-to-label:
+    if: github.event.label.name == 'run-checks'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Label Detected - Ejecutando tarea
+        run: echo "Se ha detectado la etiqueta 'run-checks' en el PR"
