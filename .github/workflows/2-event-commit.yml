@@ -1,0 +1,14 @@
+# .github/workflows/event_commit_single_job.yml
+name: Event Commit – Single Job
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  hello-world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: First Step
+        run: echo "Hello World"
