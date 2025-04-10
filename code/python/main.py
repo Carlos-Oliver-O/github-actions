@@ -40,5 +40,5 @@ def calculadora():
         print("Operación no válida")
 
 
-if __name__ == "__main__":
+if __name__ == "__main__"
     calculadora()
